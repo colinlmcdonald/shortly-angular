@@ -19,15 +19,19 @@ angular.module('shortly.services', [])
 .factory('Shorties', function ($http) {
   var link = {};
 
-  var addLink = function() {
+  var addLink = function(link) {
     return $http({
       method: 'POST',
-      url: '/api/links'
+      url: '/api/links',
+      data: link,
+      headers: {
+        'Content-Type': 'application/json'
+      },
     })
   };
 
   var checkLink = function() {
-    
+
   };
 
   return {
