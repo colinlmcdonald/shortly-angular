@@ -5,7 +5,7 @@ angular.module('shortly.auth', [])
 
 .controller('AuthController', function ($scope, $window, $location, Auth) {
   $scope.user = {};
-
+  //  console.log('------------Auth: ', Auth); from Auth factory (services.js)
   $scope.signin = function () {
     Auth.signin($scope.user)
       .then(function (token) {
