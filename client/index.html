@@ -9,8 +9,17 @@
     <h1>Shortly</h1>
 
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
+    <ul class="navigation">
+    <li ng-class="{ active: isActive('/View1') }"><a href="#/links">Links</a></li>
+    <li ng-class="{ active: isActive('/View2') }"><a href="#/shorten">Shorten</a></li>
+</ul>
+
     <div ng-view></div>
-    <div ng-controller="LinksController"></div>
+      <!-- The navigation menu will get the value of the "active" variable as a class.
+     The $event.preventDefault() stops the page from jumping when a link is clicked. -->
+
+
+
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>

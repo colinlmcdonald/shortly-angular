@@ -26,6 +26,10 @@ angular.module('shortly.services', [])
     })
   };
 
+  var checkLink = function() {
+    
+  };
+
   return {
     link: link,
     addLink: addLink

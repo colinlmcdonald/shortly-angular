@@ -23,6 +23,7 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
     })
+    .otherwise({ redirectTo: '/' })
     // Your code here
 
     // We add our $httpInterceptor into the array
