@@ -17,16 +17,18 @@ angular.module('shortly.services', [])
   };
 })
 .factory('Shorties', function ($http) {
-  var link = {};
-
   var addLink = function(link) {
     return $http({
       method: 'POST',
       url: '/api/links',
       data: link,
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'text/plain'
       },
+    }).then(function(res) {
+      return res.data;
+    }).catch(function(err) {
+      console.log(err);
     })
   };
 
@@ -35,7 +37,6 @@ angular.module('shortly.services', [])
   };
 
   return {
-    link: link,
     addLink: addLink
   }
 

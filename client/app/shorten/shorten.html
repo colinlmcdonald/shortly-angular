@@ -1,8 +1,8 @@
 <div id='container'>
 <!-- Your code here -->
-  <form action = "" ng-controller="ShortenController" ng-submit="addLink(newLink)">
-  <input type="text" ng-model="newLink">
-     <input type="submit" ngClick="Submit" >
+  <form name="addLin" ng-submit='addLink()'>
+  <input type='application/json' ng-model='link.data'>
+     <button>Add</button>
   </form>
 
 </div>

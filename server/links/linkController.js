@@ -33,7 +33,7 @@ module.exports = {
   },
 
   newLink: function (req, res, next) {
-    var url = req.body.url;
+    var url = req.body
     console.log('8888888', req.body);
     if (!util.isValidUrl(url)) {
       return next(new Error('Not a valid url'));
