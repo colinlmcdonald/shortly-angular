@@ -1,7 +1,7 @@
 <div id='container'>
   <!-- Your html here -->
     <ul ng-repeat="link in data.links" class="link">{{link.base_url + '/' + link.code}}
-      <ul class ="title">{{link.title}}
+      <ul class ="title" ng-click="goLink(link)">{{link.title}}
         <ul class="visits">Visits
           <ul class="count">{{link.visits}}</ul>
         </ul>
